@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+          <div class="account-wall">
+            <h1 class="text-center login-title">Welcome to Chit Funds</h1>
+              <img class="profile-img" src="assets/images/chits-logo.png" alt="">
+              <form class="form-signin" #loginform = "ngForm" (ngSubmit) = "loginUser()">
+                <h1 class="text-danger">{{msg}}</h1>
+                <input type="text" class="form-control" placeholder="Email" name="email" [(ngModel)]="user.emailId" required autofocus />
+                <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="user.password" required />
+                <button class="btn btn-lg btn-primary btn-block" type="submit">LogIn</button>
+                <a class='nav-link' (click)="registerRedirect()" routerLink="">Create an account</a>
+              </form>
+          </div>
+        </div>
+        <div class="col-sm-4"> </div>  
+  </div>
+</div> 
